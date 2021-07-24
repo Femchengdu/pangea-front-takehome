@@ -10,7 +10,7 @@ const Header = () => {
         </div>
         <div className="select-position-wrapper">
           <div className="select-wrapper material-icons">
-            <select name="select" id="select" class="select">
+            <select name="select" id="select" className="select">
               <option value>Filter by</option>
             </select>
           </div>
