@@ -1,3 +1,6 @@
+.grid-container {
+  background: #e2e3e6;
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(2, auto);

@@ -14,12 +14,16 @@ const ProductList = () => {
     onGetProductsFromPangea(dataCallback);
   }, []);
   const renderProduct = (productData) => {
-    const { id, price, image_url: imageUrl } = productData;
-    return <Product key={id} price={price} imageUrl={imageUrl} />;
+    const { id, price, image_url: imageUrl, title } = productData;
+    return <Product key={id} price={price} imageUrl={imageUrl} title={title} />;
   };
 
   return (
-    <div className="grid">{products.length && products.map(renderProduct)}</div>
+    <div className="grid-container">
+      <div className="grid">
+        {products.length && products.map(renderProduct)}
+      </div>
+    </div>
   );
 };
 
