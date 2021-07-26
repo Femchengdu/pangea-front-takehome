@@ -1,13 +1,13 @@
 import React from "react";
 import "./Product.css";
-const Product = ({ imageUrl, price }) => {
+const Product = ({ imageUrl, price, title }) => {
   return (
     <div className="product-container">
       <div className="product-details">
         <div className="image-container">
           <div className="image-detail-container">
             <img className="product-image" src={imageUrl} alt="" />
-            <h2 className="product-title">Lorem detail</h2>
+            <h2 className="product-title">{title}</h2>
           </div>
         </div>
         <div className="price-container">
