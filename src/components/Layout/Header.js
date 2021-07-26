@@ -5,8 +5,8 @@ const Header = () => {
     <main>
       <section>
         <div>
-          <h1>All Products</h1>
-          <p>A 360&#176; look at Lumin</p>
+          <h1 className="header-main-text">All Products</h1>
+          <p className="header-sub-text">A 360&#176; look at Lumin</p>
         </div>
         <div className="select-position-wrapper">
           <div className="select-wrapper material-icons">
