@@ -8,6 +8,7 @@ const Cart = ({
   decrementCartItem,
   currencyList,
   setCurrency,
+  currency,
 }) => {
   const closeModal = () => {
     // Get the modal
@@ -23,6 +24,7 @@ const Cart = ({
         cartItem={cartItem}
         incrementCartItem={incrementCartItem}
         decrementCartItem={decrementCartItem}
+        currency={currency}
       />
     );
   };
@@ -42,13 +44,14 @@ const Cart = ({
     setCurrency(selecetedCurrency);
   };
 
-  const returnCartSubTotal = () => {
+  const returnCartSubTotal = (currency) => {
     let subTotal = 0;
     const reducerFn = (accumulator, cartItem) => {
       const curTotal = cartItem.price * cartItem.qty;
       return curTotal + accumulator;
     };
-    return cart.reduce(reducerFn, subTotal);
+    const caluclatedTotal = cart.reduce(reducerFn, subTotal);
+    return `${currency} ${caluclatedTotal}.00`;
   };
 
   return (
@@ -57,12 +60,20 @@ const Cart = ({
       <div id="myModal" className="modal">
         {/* Modal content */}
         <div className="modal-content">
-          <span className="close" onClick={closeModal}>
-            &times;
-          </span>
+          <div className="modal-cart-top">
+            <div className="close-button-container">
+              <span className="close" onClick={closeModal}>
+                &times;
+              </span>
+            </div>
+            <div>
+              <h5>Your Cart</h5>
+            </div>
+          </div>
+
           <div>
-            Currency Select
             <select
+              className="currency-select"
               onChange={handleCurrenyChange}
               name="currency"
               id="currency"
@@ -71,12 +82,27 @@ const Cart = ({
             </select>
           </div>
           {cart.length ? (
-            cart.map(renderCartItem)
+            <>
+              <div className="cart-body">
+                <div className="cart-item-list">{cart.map(renderCartItem)}</div>
+              </div>
+              <div className="cart-footer">
+                <div className="cart-footer-subtotal">
+                  <span>Subtotal</span>
+                  <div className="footer-subtotal-price">
+                    {cart.length && returnCartSubTotal(currency)}
+                  </div>
+                </div>
+                <div className="cart-buttons">
+                  <button className="button-checkout">
+                    PROCEED TO CHECKOUT
+                  </button>
+                </div>
+              </div>
+            </>
           ) : (
             <p>Your Cart contains {cart.length} items</p>
           )}
-
-          <div>{cart.length && returnCartSubTotal()}</div>
         </div>
       </div>
     </div>
