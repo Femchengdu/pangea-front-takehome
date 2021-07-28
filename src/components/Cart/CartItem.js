@@ -1,14 +1,45 @@
 import React from "react";
-
-const CartItem = ({ cartItem, decrementCartItem, incrementCartItem }) => {
-  const { title, qty, price, id } = cartItem;
+import "./CartItem.css";
+const CartItem = ({
+  cartItem,
+  decrementCartItem,
+  incrementCartItem,
+  currency,
+}) => {
+  const returnFormatPrice = (currency, qty, price) => {
+    return `${currency} ${qty * price}.00`;
+  };
+  const { title, qty, price, id, imageUrl } = cartItem;
   return (
-    <div>
-      <p>A cart with title : {title}</p>
-      <p>Quantity : {qty}</p>
-      <p>Total price : {qty * price}</p>
-      <span onClick={() => decrementCartItem(id)}>-</span>
-      <span onClick={() => incrementCartItem(id)}>+</span>
+    <div className="cart-item">
+      <div className="product-description">
+        <h6 className="cart-heading">{title}</h6>
+        <div>combination | </div>
+        <div>one time</div>
+        <div className="item-quantity">
+          <div className="quantity-selector">
+            <span
+              className="counter-decrement"
+              onClick={() => decrementCartItem(id)}
+            >
+              -
+            </span>
+            <span className="item-counter">{qty}</span>
+            <span
+              className="counter-increment"
+              onClick={() => incrementCartItem(id)}
+            >
+              +
+            </span>
+          </div>
+          <div className="quantity-price">
+            {returnFormatPrice(currency, qty, price)}
+          </div>
+        </div>
+      </div>
+      <div className="cart-product-image-container">
+        <img className="cart-item-img" src={imageUrl} alt="Product image" />
+      </div>
     </div>
   );
 };
