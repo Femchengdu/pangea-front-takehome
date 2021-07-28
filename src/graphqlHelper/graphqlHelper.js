@@ -4,26 +4,46 @@ const axiosPanageaGraphQl = axios.create({
   baseURL: "https://pangaea-interviews.vercel.app/api/graphql",
 });
 
-const getProductsQuery = {
-  query: `query($currency: Currency){
-        products {
-            id
-            title
-            image_url
-            price(currency: $currency)
-        }
-    }`,
-  variables: { currency: "USD" },
+const getProductsQuery = (currency) => {
+  return {
+    query: `query($currency: Currency){
+          products {
+              id
+              title
+              image_url
+              price(currency: $currency)
+          }
+      }`,
+    variables: { currency },
+  };
 };
 
-export const onGetProductsFromPangea = async (callback) => {
-  const result = await axiosPanageaGraphQl.post("", getProductsQuery);
+const getCurrencyQuery = {
+  query: `query {
+    currency
+  }`,
+};
+
+export const onGetCurrencyFromPangea = async (callback) => {
+  const result = await axiosPanageaGraphQl.post("", getCurrencyQuery);
   const {
     data: {
-      data: { products },
+      data: { currency },
     },
   } = result;
-  callback(products);
+  callback(currency);
+};
 
-  //.catch((error) => console.log("pan graphql error ", error));
+export const onGetProductsFromPangea = async (callback, currency) => {
+  const result = await axiosPanageaGraphQl.post("", getProductsQuery(currency));
+  const {
+    data: { data: grapqlData },
+  } = result;
+
+  if (grapqlData) {
+    const { products } = grapqlData;
+    callback(products);
+  } else {
+    console.log("No data returned!!!");
+  }
 };
