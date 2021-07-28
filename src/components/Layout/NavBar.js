@@ -9,18 +9,8 @@ const NavBar = () => {
     const myFunction = () => {
       if (window.pageYOffset > sticky) {
         navbar.classList.add("sticky");
-        console.log(
-          "===>>> I has the navbar and sticky",
-          window.pageYOffset,
-          sticky
-        );
       } else {
         navbar.classList.remove("sticky");
-        console.log(
-          "===>>> I has the navbar and sticky",
-          window.pageYOffset,
-          sticky
-        );
       }
     };
     myFunction();
@@ -56,7 +46,7 @@ const NavBar = () => {
         <div className="select-lang-position-wrapper">
           <div className="select-lang-wrapper material-icons">
             <select className="lang-select">
-              <option selected value="en">
+              <option defaultValue value="en">
                 EN
               </option>
             </select>
