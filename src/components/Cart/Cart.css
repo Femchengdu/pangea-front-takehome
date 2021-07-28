@@ -2,7 +2,6 @@
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -14,17 +13,46 @@
 
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
-  margin: auto;
+  position: absolute;
+  background-color: #f2f2ef;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 100%;
+  height: 100%;
+  right: 0px;
+  max-width: 550px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+.cart-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #f2f2ef;
+  opacity: 0.6;
+  z-index: 100;
+  pointer-events: none;
+  transition: all 0.4s ease-in-out;
+}
+.modal-cart-top {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+.close-button-container {
+  display: flex;
+  align-items: center;
 }
 
 /* The Close Button */
 .close {
+  position: absolute;
+  left: 20px;
   color: #aaaaaa;
-  float: right;
   font-size: 28px;
   font-weight: bold;
 }
@@ -34,4 +62,131 @@
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+.currency-select {
+  padding: 8px 13px 5px 10px;
+}
+
+#currency {
+  cursor: pointer;
+}
+
+.cart-body {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.cart-item-list {
+  margin-top: 10px;
+}
+
+.cart-footer {
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-feature-settings: "kern";
+  line-height: 20px;
+  font-family: FF Bau Regular, san-serif;
+  font-weight: 400;
+  -webkit-box-direction: normal;
+  border-width: 0px;
+  border-style: solid;
+  box-sizing: border-box;
+  margin: 0;
+  font-size: inherit;
+  padding: 0 20px 20px;
+  border-top: 1px solid #d0d0d0;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+
+.cart-footer-subtotal {
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-feature-settings: "kern";
+  line-height: 20px;
+  font-family: FF Bau Regular, san-serif;
+  font-weight: 400;
+  box-sizing: border-box;
+  margin: 0;
+  font-size: inherit;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 15px;
+  -webkit-box-orient: horizontal;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  border: 0 solid #6e7b70;
+  border-top: none;
+  display: flex;
+  -webkit-box-direction: normal;
+}
+.footer-subtotal-price {
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-feature-settings: "kern";
+  line-height: 20px;
+  font-weight: 400;
+  border-width: 0px;
+  border-style: solid;
+  box-sizing: border-box;
+  margin: 0;
+  font-size: inherit;
+  display: flex;
+  -webkit-box-direction: normal;
+  font-family: FF Bau Medium, san-serif;
+  -webkit-box-orient: vertical;
+  flex-direction: column;
+  -webkit-box-align: end;
+  align-items: flex-end;
+}
+
+.cart-buttons {
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-feature-settings: "kern";
+  line-height: 20px;
+  font-family: FF Bau Regular, san-serif;
+  font-weight: 400;
+  border-width: 0px;
+  border-style: solid;
+  box-sizing: border-box;
+  margin: 0;
+  font-size: inherit;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.button-checkout {
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "kern";
+  -webkit-box-direction: normal;
+  box-sizing: border-box;
+  font-family: inherit;
+  margin: 0px;
+  overflow: visible;
+  text-transform: none;
+  background: transparent;
+  cursor: pointer;
+  line-height: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  padding: 16px 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+  background-color: #4b5548;
+  border: none;
+  margin-top: 15px;
 }
