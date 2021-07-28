@@ -1,0 +1,240 @@
+.cart-item {
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-feature-settings: "kern";
+  line-height: 20px;
+  font-family: FF Bau Regular, san-serif;
+  font-weight: 400;
+  -webkit-box-direction: normal;
+  border-width: 0px;
+  border-style: solid;
+  box-sizing: border-box;
+  margin: 0;
+  font-size: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: inherit;
+  max-height: inherit;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 15px;
+}
+
+.product-description {
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-feature-settings: "kern";
+  font-family: FF Bau Regular, san-serif;
+  font-weight: 400;
+  -webkit-box-direction: normal;
+  border-width: 0px;
+  border-style: solid;
+  box-sizing: border-box;
+  margin: 0;
+  color: #1e2d2b;
+  width: 65%;
+  line-height: 18px;
+  font-size: 10px;
+  margin-top: 5px;
+  letter-spacing: 0.02px;
+  min-height: 100px;
+}
+
+.cart-heading {
+  text-size-adjust: 100%;
+  font-feature-settings: "kern";
+  -webkit-box-direction: normal;
+  border-width: 0px;
+  border-style: solid;
+  box-sizing: border-box;
+  margin: 0px;
+  font-weight: inherit;
+  text-transform: inherit;
+  color: #1e2d2b;
+  margin-bottom: 0;
+  font-size: 13px;
+  letter-spacing: 0.03px;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  font-family: FF Bau Medium, san-serif;
+}
+
+.item-quantity {
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-feature-settings: "kern";
+  font-family: FF Bau Regular, san-serif;
+  font-weight: 400;
+  -webkit-box-direction: normal;
+  color: #1e2d2b;
+  line-height: 18px;
+  letter-spacing: 0.02px;
+  border-width: 0px;
+  border-style: solid;
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 100%;
+  margin-top: 10px;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.quantity-selector {
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-feature-settings: "kern";
+  font-family: FF Bau Regular, san-serif;
+  font-weight: 400;
+  -webkit-box-direction: normal;
+  color: #1e2d2b;
+  line-height: 18px;
+  letter-spacing: 0.02px;
+  box-sizing: border-box;
+  margin: 0;
+  font-size: inherit;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  border: 0.5px solid #bcbcbc;
+  padding: 7px;
+  width: 76px;
+}
+
+.item-counter {
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-feature-settings: "kern";
+  font-family: FF Bau Regular, san-serif;
+  font-weight: 400;
+  -webkit-box-direction: normal;
+  color: #1e2d2b;
+  line-height: 18px;
+  letter-spacing: 0.02px;
+  border-width: 0px;
+  border-style: solid;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 10px;
+  font-size: 13px;
+}
+
+.counter-decrement {
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-feature-settings: "kern";
+  font-family: FF Bau Regular, san-serif;
+  font-weight: 400;
+  -webkit-box-direction: normal;
+  line-height: 18px;
+  letter-spacing: 0.02px;
+  border-width: 0px;
+  border-style: solid;
+  box-sizing: border-box;
+  margin: 0;
+  cursor: pointer;
+  color: #000;
+  font-size: 15px;
+}
+
+.counter-increment {
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-feature-settings: "kern";
+  font-family: FF Bau Regular, san-serif;
+  font-weight: 400;
+  -webkit-box-direction: normal;
+  line-height: 18px;
+  letter-spacing: 0.02px;
+  border-width: 0px;
+  border-style: solid;
+  box-sizing: border-box;
+  margin: 0;
+  cursor: pointer;
+  color: #000;
+  font-size: 15px;
+}
+
+.quantity-price {
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-feature-settings: "kern";
+  font-family: FF Bau Regular, san-serif;
+  font-weight: 400;
+  -webkit-box-direction: normal;
+  color: #1e2d2b;
+  line-height: 18px;
+  border-width: 0px;
+  border-style: solid;
+  box-sizing: border-box;
+  margin: 0;
+  float: right;
+  padding: 0 10px;
+  width: inherit;
+  font-size: 13px;
+  letter-spacing: 0.03px;
+}
+
+.cart-product-image-container {
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-feature-settings: "kern";
+  line-height: 20px;
+  font-family: FF Bau Regular, san-serif;
+  font-weight: 400;
+  -webkit-box-direction: normal;
+  border-width: 0px;
+  border-style: solid;
+  box-sizing: border-box;
+  margin: 0;
+  font-size: inherit;
+  background-color: #fdfdfd;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 33.3%;
+  padding-right: 15px;
+}
+
+.cart-item-img {
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-feature-settings: "kern";
+  line-height: 20px;
+  font-family: FF Bau Regular, san-serif;
+  font-weight: 400;
+  -webkit-box-direction: normal;
+  border-width: 0px;
+  box-sizing: border-box;
+  margin: 0;
+  font-size: inherit;
+  border-style: none;
+  display: block;
+  vertical-align: middle;
+  max-width: 100%;
+  overflow: hidden;
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
