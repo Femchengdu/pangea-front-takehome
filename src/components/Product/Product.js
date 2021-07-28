@@ -9,7 +9,7 @@ const Product = ({ imageUrl, price, title, addItemToCart, id, currency }) => {
     addItemToCart(item);
   };
 
-  const item = { price, title, id };
+  const item = { price, title, id, imageUrl };
   return (
     <div className="product-container">
       <div className="product-details">
