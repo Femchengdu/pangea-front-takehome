@@ -20,8 +20,9 @@ const App = () => {
         incrementCartItem={incrementCartItem}
         decrementCartItem={decrementCartItem}
         setCurrency={setCurrency}
+        currency={currency}
       />
-      <NavBar />
+      <NavBar cart={cart} />
       <Header />
 
       <ProductList
