@@ -3,14 +3,14 @@ import { useState, useEffect } from "react";
 const useCartState = (products, currency) => {
   const [cart, setCart] = useState([]);
 
-  const getIDsForCartItems = () => {
-    let cartIDs = [];
-    if (cart.length) {
-      cart.forEach((cartItem) => cartIDs.push(cartItem.id));
-    }
-    return cartIDs;
-  };
   useEffect(() => {
+    const getIDsForCartItems = () => {
+      let cartIDs = [];
+      if (cart.length) {
+        cart.forEach((cartItem) => cartIDs.push(cartItem.id));
+      }
+      return cartIDs;
+    };
     const cartIDs = getIDsForCartItems();
     // Update the price for each item in the cart with the new ids
     const updateCart = [...cart];

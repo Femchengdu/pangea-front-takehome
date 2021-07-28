@@ -38,7 +38,7 @@ const CartItem = ({
         </div>
       </div>
       <div className="cart-product-image-container">
-        <img className="cart-item-img" src={imageUrl} alt="Product image" />
+        <img className="cart-item-img" src={imageUrl} alt="Product" />
       </div>
     </div>
   );

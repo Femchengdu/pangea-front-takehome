@@ -12,7 +12,7 @@ const useProductsList = () => {
       }
     };
 
-    onGetProductsFromPangea(dataCallback, currency);
+    onGetProductsFromPangea(dataCallback, "USD");
   }, []);
   const perviousCurrency = usePreviousCurrency(currency);
   useEffect(() => {
@@ -25,7 +25,7 @@ const useProductsList = () => {
 
       onGetProductsFromPangea(dataCallback, currency);
     }
-  }, [currency]);
+  }, [currency, perviousCurrency]);
 
   return {
     setCurrency,
