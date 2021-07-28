@@ -10,7 +10,7 @@ Clone this repo then run the following in your terminal;
 cd pangea-front-takehome
 ```
 
-insall the necessary dependencies by running:
+install the necessary dependencies by running:
 
 ```sh
 npm install
